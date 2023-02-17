@@ -1,0 +1,50 @@
+[
+{
+  "model": "to_do_list.task",
+  "pk": 1,
+  "fields": {
+    "title": "Помыть машину",
+    "status": "new",
+    "date_to_do": "2023-02-17",
+    "description": "поехать на автомойку"
+  }
+},
+{
+  "model": "to_do_list.task",
+  "pk": 2,
+  "fields": {
+    "title": "Подстричь собак",
+    "status": "done",
+    "date_to_do": "2023-02-16",
+    "description": "Отвезти к грумеру"
+  }
+},
+{
+  "model": "to_do_list.task",
+  "pk": 4,
+  "fields": {
+    "title": "Сдать домашнее задание",
+    "status": "in_process",
+    "date_to_do": "2023-02-17",
+    "description": "Доделать домашку, выгрузить в git"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$4CFgIbEmPJ0kYmDVsAUAWL$a/MspsHcrcF7gRDyM8Iv45CfnhZpwwv9PmbMPNV8koI=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "ana",
+    "first_name": "",
+    "last_name": "",
+    "email": "anakess88@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-02-17T02:50:26.516Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

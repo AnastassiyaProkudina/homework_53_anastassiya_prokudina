@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Task Create{% endblock %}
+{% block content %}
+    <div class="form">
+        <h4>Создать задачу</h4>
+        <br>
+        <form action="{% url 'task_add' %}" method="post">
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="title">Заголовок: </label>
+                <input type="text" id="title" name="title">
+            </div>
+            <div class="form-row">
+                <label for="description">Описание: </label>
+                <input type="text" id="description" name="description">
+            </div>
+            <br>
+            <div class="form-row">
+                <label>Статус: </label>
+                <select name="status" id="status">
+                    <option value="new" selected="selected">Новая</option>
+                    <option value="in_process">В процессе</option>
+                    <option value="done">Выполнено</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-row">
+                <label for="date_to_do">Дата выполнения: </label>
+                <input type="text" id="date_to_do" name="date_to_do">
+            </div>
+            <br>
+            <div class="form-row">
+                <input type="submit" value="Создать" class="btn btn-secondary">
+            </div>
+        </form>
+    </div>
+{% endblock %}

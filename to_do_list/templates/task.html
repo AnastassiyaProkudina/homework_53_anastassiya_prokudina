@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Task{% endblock %}
+{% block menu %}
+    <a href="{% url 'task_add' %}">Добавить+</a>
+{% endblock %}
+{% block content %}
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">Статус: {{ task.status }}</div>
+        <div class="card-body">
+            <h5 class="card-title">{{ task.title }}</h5>
+            <h6 class="card-title">Описание: {{ task.description }}</h6>
+            <p class="card-text">Дата выполнения: {{ task.date_to_do }}</p>
+        </div>
+    </div>
+{% endblock %}
+

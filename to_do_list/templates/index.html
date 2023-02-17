@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block menu %}
+    <li>
+        <a href="{% url 'task_add' %}">Добавить+</a>
+    </li>
+{% endblock %}
+{% block content %}
+    {%  for task in tasks %}
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Статус: {{ task.status }}</div>
+            <div class="card-body">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <p class="card-text">Дата выполнения: {{ task.date_to_do }}</p>
+            </div>
+            <div class="card-footer bg-transparent border-dark">
+                <a href="{% url 'task_detail' task.pk %}">Подробнее...</a>
+                <a href="{% url 'task_delete' task.pk %}">Удалить</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
